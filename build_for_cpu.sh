@@ -2,9 +2,9 @@
 set -eu
 
 # Set your organization and image name
-ORG=${ORG:-""}
+ORG=${ORG:-"arunskurian"}
 IMAGE_NAME=${IMAGE_NAME:-"ollama-cpu"}
-VERSION=${VERSION:-"rc0.9"}
+VERSION=${VERSION:-"rc0.11"}
 
 # Docker Hub credentials (can be set via environment variables)
 DOCKER_USERNAME=${DOCKER_USERNAME:-""}
