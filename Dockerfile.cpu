@@ -61,10 +61,11 @@ FROM ${FLAVOR} AS archive
 COPY --from=cpu dist/lib/ollama /lib/ollama
 COPY --from=build /bin/ollama /bin/ollama
 
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 RUN apt-get update \
     && apt-get install -y ca-certificates curl openssl \
     && apt-get install --only-upgrade -y libpam0g libpam-modules libpam-modules-bin libpam-runtime \
+    libsystemd0 libudev1 \
     && update-ca-certificates \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
